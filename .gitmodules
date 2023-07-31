@@ -1,0 +1,6 @@
+[submodule "bencodex-rs"]
+	path = bencodex-rs
+	url = https://github.com/moreal/bencodex-rs.git
+[submodule "csbindgen"]
+	path = csbindgen
+	url = https://github.com/Cysharp/csbindgen.git
