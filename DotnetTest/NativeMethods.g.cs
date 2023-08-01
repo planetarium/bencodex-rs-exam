@@ -9,12 +9,12 @@ using System.Runtime.InteropServices;
 
 namespace CsBindgen
 {
-    internal static partial class NativeMethods
+    internal static unsafe partial class NativeMethods
     {
         const string __DllName = "libbencodex";
 
-        [DllImport(__DllName, EntryPoint = "my_add", CallingConvention = CallingConvention.Cdecl, ExactSpelling = true)]
-        public static extern int my_add(int x, int y);
+        [DllImport(__DllName, EntryPoint = "c_encode", CallingConvention = CallingConvention.Cdecl, ExactSpelling = true)]
+        public static extern byte* c_encode(byte* input);
 
 
     }
