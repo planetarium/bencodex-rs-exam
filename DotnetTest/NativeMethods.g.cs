@@ -16,6 +16,12 @@ namespace CsBindgen
         [DllImport(__DllName, EntryPoint = "c_encode", CallingConvention = CallingConvention.Cdecl, ExactSpelling = true)]
         public static extern byte* c_encode(byte* input);
 
+        [DllImport(__DllName, EntryPoint = "c_free", CallingConvention = CallingConvention.Cdecl, ExactSpelling = true)]
+        public static extern void c_free(byte* str);
+
+        [DllImport(__DllName, EntryPoint = "c_decode", CallingConvention = CallingConvention.Cdecl, ExactSpelling = true)]
+        public static extern byte* c_decode(byte* input_bytes, nuint length);
+
 
     }
 
